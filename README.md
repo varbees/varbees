@@ -1,5 +1,5 @@
-- 👋 Hi, I’m @harshavar-bit
-- 👀 I’m lost in space.
+- 👋 Hi, I’m who I am 
+- 👀 I’m lost in space and time.
 - 🌱 I’m currently learning the ways of the world.
 - 💞️ I’m looking to collaborate on the world of tech, programming, web development, js, python.
 - 📫 How to reach me ... Well, mail me at harshavar968@gmail.com
