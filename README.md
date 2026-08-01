@@ -65,27 +65,6 @@ failure.
 </picture>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/varbees/varbees/main/assets/s-about-this-page-dark.svg">
-  <img src="https://raw.githubusercontent.com/varbees/varbees/main/assets/s-about-this-page-light.svg" alt="about this page" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/varbees/varbees/main/assets/calendar-dark.svg">
+  <img src="https://raw.githubusercontent.com/varbees/varbees/main/assets/calendar-light.svg" alt="a year of daily contributions" width="100%">
 </picture>
-
-Every graphic here is generated, not embedded from anyone else's server.
-[`tools/refresh.py`](tools/refresh.py) pulls the numbers from the GitHub API,
-[`tools/make_assets.py`](tools/make_assets.py) draws the SVGs, and both are
-committed here.
-
-Badge and stat-card services rate-limit, go down, change their rendering
-without telling you, and see the traffic of everyone who visits. A page that
-opens by saying I care about dependencies shouldn't load ten of them first.
-
-Every graphic is drawn twice, light and dark, and picked by
-`prefers-color-scheme`. A light panel on a dark profile is a glaring white
-rectangle; shipping one theme means choosing which half of readers get the bad
-version.
-
-The headings are SVGs for the same reason: GitHub strips CSS from READMEs, so
-an image is the only way to put this page's own type on them. No webfont is
-carried — it uses whatever monospace you already have.
-
-Numbers are checked before they're written. Contributions and languages from
-the API, test counts by running the suites. A stale one is a bug.
