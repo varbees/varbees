@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/varbees/varbees/main/assets/header-dark.svg">
-  <img src="https://raw.githubusercontent.com/varbees/varbees/main/assets/header-light.svg" alt="harshavardhan beesabathina — 1442 contributions in the last year" width="100%">
+  <img src="https://raw.githubusercontent.com/varbees/varbees/main/assets/header-light.svg" alt="harshavardhan beesabathina — contributions in the last year" width="100%">
 </picture>
 
 [antharmaya.com](https://antharmaya.com) · [linkedin](https://linkedin.com/in/varbees) · [email](mailto:harshavar968@gmail.com)
@@ -13,16 +13,13 @@
 > Self-taught into systems from the web side. Small tools that do one thing
 > completely, over frameworks that do everything badly.
 
-I direct a multi-agent workforce to build production software, and I review
-everything it writes. That habit is the whole job — it's why I can point at
-783 passing test functions instead of claiming coverage.
+I direct a multi-agent workforce to build software, and I review what it writes
+against what actually runs. Most of the work below is about the same question:
+what an AI agent is allowed to do, and how you check what it did.
 
-Right now that's **stallwatch** — your machine freezes, every monitor says it's
-fine, and nothing tells you what stopped you. It reads the pressure data Linux
-already writes and names the process. Zero dependencies, no root.
-
-Going deeper into kernel-side resource control: cgroups, PSI, and what it takes
-to bound an AI agent on a real machine without giving it root.
+Right now that is **deedroll**: before you install an MCP server, it reads what
+the server's code actually does and compares it with what the listing claims,
+without ever running it.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/varbees/varbees/main/assets/s-stack-dark.svg">
@@ -37,22 +34,36 @@ next.js  react  webgpu  cloudflare workers  docker
   <img src="https://raw.githubusercontent.com/varbees/varbees/main/assets/s-projects-light.svg" alt="projects" width="100%">
 </picture>
 
-[**stallwatch**](https://github.com/varbees/stallwatch) · rust, no dependencies
-Names the systemd unit, then the process, that froze your machine. Wakes on
-kernel triggers instead of polling, so it costs nothing until something breaks.
+[**deedroll**](https://deedroll.antharmaya.com) · javascript, mcp
+Checks an MCP server's code against its listing and cites the file and line for
+every difference. Runs in the browser; nothing is installed or executed.
+Locally: `git clone https://github.com/antharmaya/deedroll && node deedroll/bin/deedroll.js --installed`.
+
+[**siphon**](https://github.com/antharmaya/siphon) · python
+One sink for any download: video from 1,700+ sites, image posts, and `blob:`
+video. CLI, browser button, queue. `curl -fsSL https://raw.githubusercontent.com/antharmaya/siphon/master/install.sh | sh`
 
 [**rateguard**](https://github.com/varbees/rateguard) · go, node, python
-An agent holds your API key and no sense of when to stop. Budgets and breakers
-enforced in-process. No proxy, no network hop.
+Flight controls for AI agents: token budgets, loop kills and circuit breakers,
+in-process, no proxy. `npm install @varbees/rateguard-node` ·
+`pip install varbees-rateguard` · `go get github.com/varbees/rateguard/packages/sdk-go`
 
-[**memory-bridge**](https://github.com/antharmaya/mem-bridge) · python, mcp
+[**memory bridge**](https://github.com/antharmaya/mem-bridge) · python, mcp
 Every coding agent starts each task blind. Finds the conversations already on
-your disk and gives them one shared memory.
+your disk and gives them one shared, searchable memory.
+`curl -fsSL https://antharmaya.com/memory-bridge/install.sh | bash`
 
-[**photoselect**](https://photoselect.space) · go, next.js, postgres
-Payment-gated gallery delivery for Indian wedding studios. Shipped solo, 911
-commits. Shelved on purpose — the backend is off on a lapsed bill, not a design
-failure.
+[**council of hats**](https://github.com/antharmaya/council-of-hats) · python
+Deterministic multi-perspective decision review for agents, no LLM in the
+decision path. `curl -fsSL https://raw.githubusercontent.com/antharmaya/council-of-hats/v0.2.1/install.sh | bash`
+
+[**token cost**](https://antharmaya.com/tools/token-cost) · typescript
+Prices a whole agent run, not one request: context regrowth, prompt caching,
+thinking tokens. `npm i @antharmaya/tokencost`
+
+[**stallwatch**](https://github.com/varbees/stallwatch) · rust · shipped, archived
+Names the systemd unit, then the process, that froze your machine. Finished at
+v0.2.2 and archived on 2026-10-01. `cargo install stallwatch`
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/varbees/varbees/main/assets/s-stats-dark.svg">
