@@ -470,7 +470,7 @@
   ],
   [
    2,
-   0,
+   2,
    0,
    0,
    0,
@@ -528,11 +528,11 @@
    "sep"
   ]
  ],
- "total": 1714,
- "active_days": 147,
+ "total": 1716,
+ "active_days": 148,
  "best_week": 145,
  "current_streak": 0,
- "longest_streak": 10,
+ "longest_streak": 11,
  "weekly": [
   4,
   4,
@@ -586,7 +586,7 @@
   52,
   103,
   29,
-  4
+  6
  ],
  "public_repos": 43
 }
